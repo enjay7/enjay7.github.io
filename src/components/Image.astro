@@ -1,0 +1,10 @@
+---
+import { getImage,type LocalImageProps, type RemoteImageProps } from 'astro:assets';
+
+
+export type Props = LocalImageProps | RemoteImageProps;
+
+const attrs = await getImage({ format: 'webp', ...Astro.props });
+---
+
+<img {...attrs} loading='lazy' decoding='async' />
