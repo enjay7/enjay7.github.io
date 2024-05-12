@@ -11,7 +11,7 @@ import rehypeCodeTitles from 'rehype-code-titles'
 import rehypePrism from 'rehype-prism'
 
 export default defineConfig({
-  site: 'https://enjay7.github.io',
+  site: 'https://naveenjetty.com',
 	markdown: {
 		syntaxHighlight: false,
 		rehypePlugins: [
