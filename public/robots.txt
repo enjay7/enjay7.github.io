@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://naveenjetty.com/sitemap.xml
