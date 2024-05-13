@@ -24,11 +24,11 @@ export default defineConfig({
   },
   integrations: [
     svelte(),
-		tailwind({ config: { applyBaseStyles: false } }),
-		expressiveCode(),
-		mdx(),
-		sitemap(),
-		compress(),
+	tailwind({ config: { applyBaseStyles: false } }),
+	expressiveCode(),
+	mdx(),
+	sitemap(),
+	compress(),
 	],
 	vite: {
 		server: {
