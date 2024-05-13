@@ -14,7 +14,7 @@ fn main() {
 }
 ```
 
-```c:hello-world.c
+```c
 #include <stdio.h>
 
 int main() {

@@ -157,6 +157,18 @@ img {
 	@apply mt-0 rounded-b-lg rounded-t-none text-sm;
 }
 
+.expressive-code {
+	@apply mb-8;
+}
+
+.rehype-code-title + .expressive-code > figure {
+	@apply mt-0 rounded-b-lg rounded-t-none text-sm;
+}
+
+.rehype-code-title + .expressive-code > figure > pre {
+	@apply rounded-b-lg rounded-t-none text-sm;
+}
+
 .token.comment {
 	@apply text-slate-400;
 }
