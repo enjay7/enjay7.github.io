@@ -1,19 +1,20 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
+import svelte from '@astrojs/svelte';
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import compress from 'astro-compress';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutoLinkHeadings from 'rehype-autolink-headings';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism';
+import expressiveCode from "astro-expressive-code";
 
-import svelte from '@astrojs/svelte'
-import tailwind from '@astrojs/tailwind'
-import sitemap from '@astrojs/sitemap'
-import mdx from '@astrojs/mdx'
-import compress from 'astro-compress'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutoLinkHeadings from 'rehype-autolink-headings'
-import rehypeCodeTitles from 'rehype-code-titles'
-import rehypePrism from 'rehype-prism'
-
+// https://astro.build/config
 export default defineConfig({
   site: 'https://naveenjetty.com',
 	markdown: {
-		syntaxHighlight: false,
+		syntaxHighlight: 'prism',
 		rehypePlugins: [
 			rehypeSlug,
 			rehypeAutoLinkHeadings,
@@ -24,6 +25,7 @@ export default defineConfig({
   integrations: [
     svelte(),
 		tailwind({ config: { applyBaseStyles: false } }),
+		expressiveCode(),
 		mdx(),
 		sitemap(),
 		compress(),

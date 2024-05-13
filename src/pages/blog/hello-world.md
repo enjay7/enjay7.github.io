@@ -13,3 +13,16 @@ fn main() {
     println!("Hello, world!");
 }
 ```
+
+```c:hello-world.c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+}
+```
+
+```ts:hello.ts
+console.log("Hello World);
+```

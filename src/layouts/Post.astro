@@ -5,8 +5,8 @@ import { format, parse } from 'date-fns'
 import photo from 'assets/images/photo.jpg';
 import Layout from "layouts/Layout.astro";
 import Image from 'components/Image.astro';
-import ViewsCounter from 'components/ViewsCounter.astro';
-import ViewsCounterScript from 'components/ViewsCounter.script.astro';
+// import ViewsCounter from 'components/ViewsCounter.astro';
+// import ViewsCounterScript from 'components/ViewsCounter.script.astro';
 
 const { title, publishedAt, original } = Astro.props.content
 const publishDate = format(parse(publishedAt, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy')
@@ -37,7 +37,7 @@ const githubFileUrl = `https://github.com/enjay7/enjay7.github.io/edit/main/site
 					</time>
 				</div>
 				<div class="text-slate-500">
-					<ViewsCounter {slug} shouldCount />
+					<!-- <ViewsCounter {slug} shouldCount /> -->
 					<span class="inline-block mx-2" role="separator">
 						&bull;
 					</span>
@@ -64,5 +64,5 @@ const githubFileUrl = `https://github.com/enjay7/enjay7.github.io/edit/main/site
 			)}
 		</footer>
 	</article>
-	<ViewsCounterScript />
+	<!-- <ViewsCounterScript /> -->
 </Layout>

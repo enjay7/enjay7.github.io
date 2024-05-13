@@ -1,6 +1,6 @@
 ---
 import LangBadge from './LangBadge.astro'
-import ViewsCounter from './ViewsCounter.astro'
+// import ViewsCounter from './ViewsCounter.astro'
 
 export type Props = {
 	title: string
@@ -11,9 +11,10 @@ export type Props = {
 		url: string
 		external?: boolean| undefined
 	}| undefined
+	publishedAt: string | undefined
 }
 
-const { title, summary, url = '', lang, original } = Astro.props
+const { title, summary, url = '', lang, original, publishedAt } = Astro.props
 const slug = url.split('/').pop()
 ---
 
@@ -37,7 +38,8 @@ const slug = url.split('/').pop()
 		</h3>
 		{!original?.external && (
 		<span class="whitespace-nowrap text-sm sm:text-base text-slate-500 text-left md:text-right">
-			<ViewsCounter {slug} />
+			{/* <ViewsCounter {slug} /> */}
+			{publishedAt}
 		</span>
 		)}
 	</div>

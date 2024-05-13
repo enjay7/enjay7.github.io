@@ -1,6 +1,6 @@
 ---
 import BlogItem from "components/BlogItem.astro";
-import ViewsCounterScript from 'components/ViewsCounter.script.astro';
+// import ViewsCounterScript from 'components/ViewsCounter.script.astro';
 import Layout from "layouts/Layout.astro";
 
 type PostFrontMatter = {
@@ -36,5 +36,5 @@ posts.sort((a, b) => Date.parse(a.frontmatter.publishedAt) - Date.parse(b.frontm
 		</li>
 		))}
 	</ul>
-	<ViewsCounterScript />
+	<!-- <ViewsCounterScript /> -->
 </Layout>

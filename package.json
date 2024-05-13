@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@kotosha/astro-gist": "^1.0.0",
+    "astro-expressive-code": "^0.35.3",
     "svelte": "^4.2.16"
   },
   "devDependencies": {
